@@ -3,14 +3,9 @@
     font-family: Lobster;
 }
 
-@font-face{
-    src: url(../font/merriweather/Merriweather-Regular.ttf);
-    font-family: Merriweather;
-}
-
 #bs-example-navbar-collapse-1 > ul {
     font-size: 1.3em;
-    font-family: Merriweather;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav > div > div.navbar-header.page-scroll {
@@ -21,22 +16,22 @@
     font-family: Lobster;
 }
 
+.button-section {
+    padding-top: 30px;
+}
 .btn-def {
     background-color: #3072ab;
     height: 300px;
     width: 210px;
-    color: #f0ad4e;
-    font-family: Merriweather;
+    color: #ffa82d;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.3em;
+    text-shadow: 2px 2px black;
 }
 
 .btn-def:hover, .btn-def:focus {
-    color: #f0ad4e;
-}
-
-.btn-def-2 {
-    background-color: #2C3E50;
+    color: #ffa82d;
 }
 
 .footer-green {
