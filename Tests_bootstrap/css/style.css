@@ -1,44 +1,181 @@
-@font-face{
-    src: url(../font/Lobster.otf);
-    font-family: Lobster;
+/* GENERAL */
+body {
+    padding-top: 70px;
+    line-height: 1.42857143;
 }
 
-#bs-example-navbar-collapse-1 > ul {
-    font-size: 1.3em;
-    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+hr {
+    border-top: 5px solid #333;
+    margin-right: 450px;
+    margin-left: 450px;
 }
 
-#mainNav > div > div.navbar-header.page-scroll {
-    margin-left: 0 !important;
-}
-
-.intro-text, .intro-text span.name {
-    font-family: Lobster;
-}
-
-.button-section {
-    padding-top: 30px;
-}
-.btn-def {
-    background-color: #3072ab;
-    height: 300px;
-    width: 210px;
-    color: #ffa82d;
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.btn-def,
+.btn-def:hover,
+.btn-def:focus,
+.btn-def:active,
+.btn-def:visited,
+.btn-def:link{
+    background: -moz-linear-gradient(-45deg, #3072ab 0%, #5a86aa 49%, #207cca 100%, #2989d8 100%, #8599aa 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #3072ab 0%,#5a86aa 49%,#207cca 100%,#2989d8 100%,#8599aa 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #3072ab 0%,#5a86aa 49%,#207cca 100%,#2989d8 100%,#8599aa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 115px;
+    width: 220px;
+    border-radius: 15px;
+    color: darkorange;
+    font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.3em;
-    text-shadow: 2px 2px black;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
 }
 
-.btn-def:hover, .btn-def:focus {
-    color: #ffa82d;
+/* BARRE DE NAVIGATION */
+
+.logo {
+    width: 100px;
 }
 
+.navbar-custom {
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p.navbar-text {
+    color: darkorange !important;
+    font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.5em;
+}
+
+ul.nav.navbar-nav {
+    padding-top: 15px;
+    font-size: 1.3em;
+    font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-custom .navbar-nav li.active a{
+    background: #234;
+    color: darkorange; 
+}
+
+.navbar-custom .navbar-nav li.active a:hover,
+.navbar-custom .navbar-nav li.active a:focus {
+    background: #234;
+    color: white;
+}
+
+.navbar-custom .navbar-nav li a,
+.navbar-custom .navbar-nav li a:focus
+{
+    color: darkorange;
+}
+
+.navbar-custom .navbar-nav li a:hover{
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    color: #333;
+    background: #5bc0de;
+}
+
+header .container {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.name {
+    font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 4.75em;
+    font-weight: 700;
+}
+.skills {
+    font-size: 1.75em;
+    font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* INTRODUCTION */
+#introduction {
+    padding: 100px 0;
+}
+
+#introduction .row {
+    text-align: justify;
+}
+
+#loup {
+    width: 100px;
+    text-align: center;
+}
+section h2 {
+    margin: 0;
+    font-size: 3em;
+    font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 3px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+}
+
+p.intro {
+    font-size: 20px;
+    font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* BOUTONS */
+#panda {
+    width: 90px;
+    position: absolute;
+    margin-top: -72px;
+    margin-left: 2px;
+    z-index: -1;
+}
+#duck {
+    width: 90px;
+    position: absolute;
+    z-index: -1;
+    margin-top: -80px;
+    margin-left: 141px;
+}
+
+/* FOOTER */
+footer {
+    padding-top: 70px;
+}
+.text-center {
+    text-align: center;
+}
+.footer-above {
+    padding-top: 10px;
+    background-color: #2C3E50;
+    font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+}
+
+.footer-col {
+    margin-bottom: 15px;
+}
+
+footer h3 {
+    margin-bottom: 30px;
+    font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 24px;
+}
+.sitemap {
+    list-style: none;
+    padding: 0;
+}
 .footer-green {
     color: #18BC9C;
 }
-
-.sitemap {
-    list-style-type: none;
-    padding: 0;
+.footer-below {
+    padding: 15px 0;
+    background-color: #233140;
+    color: white;
 }
