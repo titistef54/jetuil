@@ -4356,14 +4356,21 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
     margin: 0;
   }
-  .navbar-nav > li {
+  /*.navbar-nav > li {
     float: left;
-  }
+  }*/
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 }
+
+@media (min-width: 993px) {
+	.navbar-nav > li {
+		float: left;
+	}
+}
+
 .navbar-form {
   padding: 10px 15px;
   margin-top: 8px;

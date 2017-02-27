@@ -6,28 +6,37 @@ body {
 
 hr {
     border-top: 5px solid #333;
-    margin-right: 450px;
-    margin-left: 450px;
+    max-width: 250px;
+    text-align: center;
+    margin: 25px auto 30px;
 }
+
+
+
 
 .btn-def,
 .btn-def:hover,
 .btn-def:focus,
 .btn-def:active,
 .btn-def:visited,
-.btn-def:link{
-    background: -moz-linear-gradient(-45deg, #3072ab 0%, #5a86aa 49%, #207cca 100%, #2989d8 100%, #8599aa 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #3072ab 0%,#5a86aa 49%,#207cca 100%,#2989d8 100%,#8599aa 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #3072ab 0%,#5a86aa 49%,#207cca 100%,#2989d8 100%,#8599aa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.btn-def:link {
+    background: #5bc0de; /* Old browsers */
+    background: -moz-linear-gradient(top, #5bc0de 0%, #91d8f8 100%, #2989d8 100%, #207cca 100%, #26819c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #5bc0de 0%, #91d8f8 100%, #2989d8 100%, #207cca 100%, #26819c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #5bc0de 0%, #91d8f8 100%, #2989d8 100%, #207cca 100%, #26819c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     height: 115px;
     width: 220px;
     border-radius: 15px;
-    color: darkorange;
+    border: none;
+    color: white;
     font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.3em;
-    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 15px #000;
+
 }
+
+
 
 /* BARRE DE NAVIGATION */
 
@@ -178,4 +187,129 @@ footer h3 {
     padding: 15px 0;
     background-color: #233140;
     color: white;
+}
+
+/* MEDIA QUERIES */
+/* --- POUR LES MOBILES --- */
+@media (max-width: 767px) {
+    body {
+        padding-top: 20px;
+    }
+    
+    header .container {
+        padding-bottom: 45px;
+    }
+    
+    .logo {
+        width: 30px;
+    }
+    
+    .navbar-brand {
+        padding-top: 5px;
+    }
+    
+    p.navbar-text {
+        font-size: 1.6em;
+    }
+    
+    .navbar-toggle {
+        vertical-align: middle;
+    }
+    
+    .navbar-collapse {
+        border-color: #2C3E50 !important;
+    }
+    
+    ul.nav.navbar-nav {
+        text-align: center;
+    }
+    
+    .pull-right {
+        float: none !important;
+    }
+    
+    .name {
+        font-size: 2.9em;
+    }
+    
+    hr {
+        border-top: 2px solid #333;
+        max-width: 100px;
+    }
+    
+    .skills {
+        font-size: 1.5em;
+    }
+
+    #introduction {
+        padding: 45px 0;
+    }
+    
+    section h2 {
+        font-size: 2.3em;
+    }
+    
+    .btn-accueil-margintop { margin-top: 30px; }
+    .btn-accueil-margintop-duck { margin-top: 100px; }
+}
+
+/* --- POUR LES TABLETTES(portrait) --- */
+@media (min-width: 768px) and (max-width: 992px)
+{
+    .navbar-brand {
+        padding: 5px 15px;
+    }
+
+    .logo {
+        width: 45px;
+    }
+
+    .navbar-header {
+        float: none;
+    }
+    
+    .navbar-toggle {
+        position: relative;
+        float: right;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        display: block;
+    }
+    
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+    }
+    
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    
+    .collapsing {
+        overflow: hidden !important;
+    }
+    
+    .navbar-toggle {
+        vertical-align: middle;
+    }
+    
+    ul.nav.navbar-nav {
+        text-align: center;
+    }
+
+    .pull-right {
+        float: none !important;
+    }
 }

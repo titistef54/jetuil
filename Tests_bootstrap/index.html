@@ -27,14 +27,23 @@
         <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#burger_menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a href="#" class="navbar-brand"><img class="logo" src="img/logo_grenouille.png" alt="Logo du site représentant une grenouille"></a>
+                    <p class="navbar-text">Je tu il ra...conte(s)</p>
                 </div>
-                <p class="navbar-text">Je tu il ra...conte(s)</p>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse" id="burger_menu">
                 <ul class="nav navbar-nav pull-right">
                     <li class="active"><a href="#">Accueil</a></li>
                     <li><a href="#">Connexion</a></li>
                     <li><a href="#">Bibliothèque de contes</a></li>
                 </ul>
+                </div>
             </div>
         </nav>
         <!-- /.navbar.navbar-default.navbar-custom.navbar-fixed-top -->
@@ -86,17 +95,13 @@
         <section class="button-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-offset-2 col-lg-4">
-                        <center>
+                    <div class="col-lg-offset-2 col-lg-4 col-sm-offset-2 col-sm-4 text-center btn-accueil-margintop">
                            <img id="panda" src="img/Panda.png" alt="">
                             <button class="btn btn-def">CONNEXION</button>
-                        </center>
                     </div>
-                    <div class="col-lg-4">
-                        <center>
+                    <div class="col-lg-4 col-sm-4 text-center btn-accueil-margintop-duck">
                            <img id="duck" src="img/duck.png" alt="">
                             <button class="btn btn-def">VISITEURS - PARENTS</button>
-                        </center>
                     </div>
                 </div>
             </div>
