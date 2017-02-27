@@ -189,6 +189,30 @@ footer h3 {
     color: white;
 }
 
+/* BIBLIOTHEQUE DE CONTES (VISITEURS)*/
+#bibliotheque_visiteurs {
+    padding: 100px 0;
+    text-align: center;
+    color: #333;
+    background: #5bc0de;
+}
+
+#bibliotheque_visiteurs .row {
+    text-align: justify;
+}
+
+p.description_bibliotheque {
+    font-size: 20px;
+    font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.impair {
+    background-color: gray;
+}
+
+.pair {
+    background-color: gainsboro;
+}
 /* MEDIA QUERIES */
 /* --- POUR LES MOBILES --- */
 @media (max-width: 767px) {
