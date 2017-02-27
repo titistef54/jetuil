@@ -11,9 +11,6 @@ hr {
     margin: 25px auto 30px;
 }
 
-
-
-
 .btn-def,
 .btn-def:hover,
 .btn-def:focus,
@@ -28,15 +25,19 @@ hr {
     width: 220px;
     border-radius: 15px;
     border: none;
-    color: white;
     font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.3em;
     text-shadow: 2px 2px 15px #000;
-
 }
 
+.btn-def a {
+    color: white;
+}
 
+.btn-def a:hover {
+    text-decoration: none;
+}
 
 /* BARRE DE NAVIGATION */
 
@@ -63,9 +64,9 @@ ul.nav.navbar-nav {
     font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.navbar-custom .navbar-nav li.active a{
+.navbar-custom .navbar-nav li.active a {
     background: #234;
-    color: darkorange; 
+    color: darkorange;
 }
 
 .navbar-custom .navbar-nav li.active a:hover,
@@ -75,12 +76,11 @@ ul.nav.navbar-nav {
 }
 
 .navbar-custom .navbar-nav li a,
-.navbar-custom .navbar-nav li a:focus
-{
+.navbar-custom .navbar-nav li a:focus {
     color: darkorange;
 }
 
-.navbar-custom .navbar-nav li a:hover{
+.navbar-custom .navbar-nav li a:hover {
     color: white;
 }
 
@@ -101,6 +101,7 @@ header .container {
     font-size: 4.75em;
     font-weight: 700;
 }
+
 .skills {
     font-size: 1.75em;
     font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -119,6 +120,7 @@ header .container {
     width: 100px;
     text-align: center;
 }
+
 section h2 {
     margin: 0;
     font-size: 3em;
@@ -135,6 +137,10 @@ p.intro {
 }
 
 /* BOUTONS */
+.button-section {
+    padding: 20px 0 70px 0;
+}
+
 #panda {
     width: 90px;
     position: absolute;
@@ -142,6 +148,7 @@ p.intro {
     margin-left: 2px;
     z-index: -1;
 }
+
 #duck {
     width: 90px;
     position: absolute;
@@ -151,12 +158,10 @@ p.intro {
 }
 
 /* FOOTER */
-footer {
-    padding-top: 70px;
-}
 .text-center {
     text-align: center;
 }
+
 .footer-above {
     padding-top: 10px;
     background-color: #2C3E50;
@@ -176,13 +181,16 @@ footer h3 {
     font-weight: 700;
     font-size: 24px;
 }
+
 .sitemap {
     list-style: none;
     padding: 0;
 }
+
 .footer-green {
     color: #18BC9C;
 }
+
 .footer-below {
     padding: 15px 0;
     background-color: #233140;
@@ -195,48 +203,48 @@ footer h3 {
     body {
         padding-top: 20px;
     }
-    
+
     header .container {
         padding-bottom: 45px;
     }
-    
+
     .logo {
         width: 30px;
     }
-    
+
     .navbar-brand {
         padding-top: 5px;
     }
-    
+
     p.navbar-text {
         font-size: 1.6em;
     }
-    
+
     .navbar-toggle {
         vertical-align: middle;
     }
-    
+
     .navbar-collapse {
         border-color: #2C3E50 !important;
     }
-    
+
     ul.nav.navbar-nav {
         text-align: center;
     }
-    
+
     .pull-right {
         float: none !important;
     }
-    
+
     .name {
         font-size: 2.9em;
     }
-    
+
     hr {
         border-top: 2px solid #333;
         max-width: 100px;
     }
-    
+
     .skills {
         font-size: 1.5em;
     }
@@ -244,18 +252,22 @@ footer h3 {
     #introduction {
         padding: 45px 0;
     }
-    
+
     section h2 {
         font-size: 2.3em;
     }
-    
-    .btn-accueil-margintop { margin-top: 30px; }
-    .btn-accueil-margintop-duck { margin-top: 100px; }
+
+    .btn-accueil-margintop {
+        margin-top: 30px;
+    }
+
+    .btn-accueil-margintop-duck {
+        margin-top: 100px;
+    }
 }
 
 /* --- POUR LES TABLETTES(portrait) --- */
-@media (min-width: 768px) and (max-width: 992px)
-{
+@media (min-width: 768px) and (max-width: 992px) {
     .navbar-brand {
         padding: 5px 15px;
     }
@@ -267,7 +279,7 @@ footer h3 {
     .navbar-header {
         float: none;
     }
-    
+
     .navbar-toggle {
         position: relative;
         float: right;
@@ -281,30 +293,30 @@ footer h3 {
         border-radius: 4px;
         display: block;
     }
-    
+
     .navbar-toggle .icon-bar {
         display: block;
         width: 22px;
         height: 2px;
         border-radius: 1px;
     }
-    
+
     .navbar-collapse.collapse {
         display: none !important;
     }
-    
+
     .navbar-collapse.collapse.in {
         display: block !important;
     }
-    
+
     .collapsing {
         overflow: hidden !important;
     }
-    
+
     .navbar-toggle {
         vertical-align: middle;
     }
-    
+
     ul.nav.navbar-nav {
         text-align: center;
     }
@@ -312,4 +324,28 @@ footer h3 {
     .pull-right {
         float: none !important;
     }
+}
+
+/* PAGE DE CONNEXION */
+#connexion {
+    padding: 70px 0 70px 0;
+    background: #5bc0de;
+}
+
+.formConnexion {
+    background: white;
+    border-radius: 5px;
+    padding: 50px 50px;
+}
+
+.btn-form,
+.btn-form:hover,
+.btn-form:focus,
+.btn-form:active,
+.btn-form:visited,
+.btn-form:link {
+    height: 50px;
+    width: 150px;
+    color: white;
+    border-radius: 10px;
 }
