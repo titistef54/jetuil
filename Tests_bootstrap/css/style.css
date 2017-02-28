@@ -198,6 +198,9 @@ footer h3 {
 }
 
 /* BIBLIOTHEQUE DE CONTES (VISITEURS)*/
+#formulaire_choix {
+    margin-top: 50px;
+}
 #bibliotheque_visiteurs {
     padding: 100px 0;
     text-align: center;
@@ -220,6 +223,25 @@ p.description_bibliotheque {
 
 .pair {
     background-color: gainsboro;
+}
+
+.content_bibliotheque {
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-tabs.nav-justified > li > a {
+    color: white;
+}
+
+.nav-tabs.nav-justified > li > a:hover {
+    color: #555;
+}
+
+.nav-tabs.nav-justified > li.active > a {
+    color: #555;
 }
 /* MEDIA QUERIES */
 /* --- POUR LES MOBILES --- */
@@ -287,6 +309,21 @@ p.description_bibliotheque {
 
     .btn-accueil-margintop-duck {
         margin-top: 100px;
+    }
+    
+    .table-responsive {
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    #conte {
+        margin-top: 40px;
+    }
+    
+    .nav-tabs.nav-justified {
+        width: 200px;
+        margin: auto;
     }
 }
 
