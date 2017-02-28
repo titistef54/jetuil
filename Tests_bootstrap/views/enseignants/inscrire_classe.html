@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Je tu il ra...conte(s)</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- BARRE DE NAVIGATION -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#burger_menu"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../../index.html" class="navbar-brand">
+                <img class="logo" src="../../img/logo_grenouille.png" alt="Logo du site représentant une grenouille">
+            </a>
+            <p class="navbar-text"><a href="../../index.html">Je tu il ra...conte(s)</a></p>
+        </div>
+        <!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="burger_menu">
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="#">Bibliothèque de contes</a></li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">Interface Enseignants <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dashboard.html">Tableau de bord</a></li>
+                        <li><a href="inscrire_classe.html">Inscrire une classe</a></li>
+                        <li><a href="#">Sélectionner un conte</a></li>
+                        <li><a href="#">Créer un partenariat</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tutoriels</a></li>
+                <li><a href="../../index.html">Déconnexion</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- /.navbar.navbar-default.navbar-custom.navbar-fixed-top -->
+
+
+<!-- SECTION INSCRIRE CLASSE -->
+<section id="section_enseignants">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Inscrire une classe</h2>
+                <hr>
+            </div>
+        </div>
+
+        <form action="#">
+
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 block-classe">
+
+                    <div class="col-lg-4">
+                        <h3 class="text-center">Votre classe</h3>
+                        <hr class="small-hr">
+
+                        <div class="form-group">
+                            <label for="departement">Département de votre classe :</label>
+                            <select name="departement" id="departement" class="form-control">
+                                <option value="" disabled selected>-- Choisissez un département --</option>
+                                <option value="ain">01 - Ain</option>
+                                <option value="aisne">02 - Aisne</option>
+                                <option value="allier">03 - Allier</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Ville de votre classe :</label>
+                            <select name="ville" id="ville" class="form-control">
+                                <option value="" disabled selected>-- Choisissez une ville --</option>
+                                <option value="abbecourt">Abbécourt</option>
+                                <option value="achery">Achery</option>
+                                <option value="Agnicourt_et_sechelles">Agnicourt-et-Séchelles</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="etablissement">Établissement de votre classe :</label>
+                            <input type="text" autocomplete="on" id="etablissement" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="niveau">Niveau de votre classe :</label>
+                            <select name="niveau" id="niveau" class="form-control">
+                                <option value="" disabled selected>-- Choisissez un niveau --</option>
+                                <option value="gs">Grande section de maternelle</option>
+                                <option value="cp">CP</option>
+                                <option value="ce1">CE1</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <h3 class="text-center">Vos élèves</h3>
+                        <hr class="small-hr">
+
+                        <table class="table table-responsive table-bordered" id="table-eleve">
+                            <thead class="table-classe">
+                            <tr>
+                                <td class="nombre-eleve text-center">#</td>
+                                <td>Nom</td>
+                                <td>Prénom</td>
+                                <td>Mot de passe</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="eleve nombre-eleve">1</td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                            </tr>
+                            <tr>
+                                <td class="eleve nombre-eleve">2</td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                            </tr>
+                            <tr>
+                                <td class="eleve nombre-eleve">3</td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                            </tr>
+                            <tr>
+                                <td class="eleve nombre-eleve">4</td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                            </tr>
+                            <tr>
+                                <td class="eleve nombre-eleve">5</td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                                <td class="eleve"><input type="text" class="form-control input-eleve"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <img src="../../img/add_icon.png" alt="Ajouter un élève" class="ajout-eleve center-block">
+                    </div>
+
+                    <div class="col-lg-12">
+                        <button type="submit" class="btn btn-def btn-form center-block">Créer ma classe</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+<!-- /SECTION INSCRIRE CLASSE -->
+
+
+<!-- FOOTER -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer.col col-md-4">
+                    <h3>Plan du site</h3>
+                    <ul class="sitemap">
+                        <li class="footer-green">Accueil</li>
+                        <li class="footer-green">Connexion</li>
+                        <li class="footer-green">Bibliothèque de contes</li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Contact</h3>
+                    <p class="footer-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae iste quod
+                        ratione quia placeat.</p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>A propos</h3>
+                    <p class="footer-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolorum
+                        blanditiis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; 2017
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /FOOTER -->
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Scripts Javascript-->
+<script src="../../js/bootstrap.min.js"></script>
+
+<!-- Script pour ajouter une ligne a la table élève -->
+<script>
+    $(function () {
+       $('.ajout-eleve').on('click', function () {
+           // Récupère le nombre de tr dans la table #table-eleve
+           var rowCount = $('#table-eleve tr').length;
+
+           // Les lignes html à ajouter pour rajouter une ligne à la table
+           var $trAdd = '<tr>' +
+               '<td class="eleve nombre-eleve">' + (rowCount) + '</td>' +
+               '<td class="eleve"><input type="text" class="form-control input-eleve"></td>' +
+               '<td class="eleve"><input type="text" class="form-control input-eleve"></td>' +
+               '<td class="eleve"><input type="text" class="form-control input-eleve"></td>' +
+               '</tr>';
+
+           // Ajoute une ligne à la table
+           $('#table-eleve tr:last').after($trAdd);
+       });
+    });
+</script>
+
+</body>
+
+</html>

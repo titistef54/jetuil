@@ -2,13 +2,24 @@
 body {
     padding-top: 70px;
     line-height: 1.42857143;
+    font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 hr {
     border-top: 5px solid #333;
     max-width: 250px;
     text-align: center;
-    margin: 25px auto 30px;
+    margin: 20px auto 30px;
+}
+
+.small-hr {
+    border-top: 2px solid #333;
+    max-width: 150px;
+    margin: 10px auto 20px;
 }
 
 a:hover {
@@ -345,6 +356,44 @@ p.description_bibliotheque {
 li.dropdown.active.open > ul > li > a:hover {
     background-color: white;
     color: #234;
+}
+
+/* DASHBOARD */
+#section_enseignants {
+    padding: 80px 0 80px 0;
+    background: #5bc0de;
+}
+
+/* INSCRIRE_CLASSE */
+.block-classe {
+    border-radius: 10px;
+    background-color: white;
+    padding:50px 10px;
+}
+
+.table-classe {
+    font-weight: bold;
+}
+
+.eleve {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.input-eleve {
+    margin:0 !important;
+    border-radius: 0 !important;
+}
+
+.nombre-eleve {
+    width: 50px;
+    font-weight: bold;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.ajout-eleve {
+    width: 35px;
 }
 
 /* MEDIA QUERIES */
