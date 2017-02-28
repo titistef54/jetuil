@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="burger_menu">
                 <ul class="nav navbar-nav pull-right">
                     <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="#">Connexion</a></li>
+                    <li><a href="../connexion.html">Connexion</a></li>
                     <li class="active"><a href="views/visiteurs/bibliotheque_visiteur.html">Bibliothèque de contes</a></li>
                 </ul>
                 </div>
@@ -150,7 +150,7 @@
                         </table>
                     </section>
                     <section class="col-lg-7" id="conte">
-                        <ul class="nav nav-tabs nav-justified">
+                        <ul class="nav nav-tabs" id="onglets">
                             <li class="active"><a href="#situation_initiale" data-toggle="tab">Situation Initiale</a></li>
                             <li><a href="#element_declencheur" data-toggle="tab">Elément déclencheur</a></li>
                             <li><a href="#peripetie" data-toggle="tab">Péripétie</a></li>
@@ -180,14 +180,57 @@
             </div>
         </section>
         <!-- /#bibliotheque_visiteurs-->
-        
-    <!-- /RECHERCHE D'UN CONTE-->
+        <!-- FOOTER -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer.col col-md-4">
+                            <h3>Plan du site</h3>
+                            <ul class="sitemap">
+                        <li><a href="../../index.html" class="footer-green">Accueil</a></li>
+                        <li><a href="../connexion.html" class="footer-green">Connexion</a></li>
+                        <li><a href="bibliotheque_visiteur.html" class="footer-green">Bibliothèque de contes</a></li>
+                    </ul>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Contact</h3>
+                            <p class="footer-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae iste quod
+                                ratione quia placeat.</p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>A propos</h3>
+                            <p class="footer-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolorum
+                            blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; 2017
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!-- /FOOTER -->
        
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <!-- Scripts Javascript-->
         <script src="../../js/bootstrap.js"></script>
+        
+        <script>
+            $(function() {
+               if(window.matchMedia("(max-width: 767px)").matches) {
+                   $("#onglets").addClass("nav-justified");
+               } 
+            });
+        </script>
         
     </body>
 </html>

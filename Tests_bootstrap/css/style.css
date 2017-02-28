@@ -199,6 +199,10 @@ footer h3 {
     color: #18BC9C;
 }
 
+.footer-green:hover {
+    color: #18BC9C;
+}
+
 .footer-below {
     padding: 15px 0;
     background-color: #233140;
@@ -236,19 +240,19 @@ p.description_bibliotheque {
 .content_bibliotheque {
     background-color: white;
     border-radius: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
+    text-align: justify;
 }
 
-.nav-tabs.nav-justified > li > a {
+.nav-tabs > li > a {
     color: white;
 }
 
-.nav-tabs.nav-justified > li > a:hover {
+.nav-tabs > li > a:hover {
     color: #555;
 }
 
-.nav-tabs.nav-justified > li.active > a {
+.nav-tabs > li.active > a {
     color: #555;
 }
 /* PAGE DE CONNEXION */
@@ -343,7 +347,7 @@ p.description_bibliotheque {
     .btn-accueil-margintop-duck {
         margin-top: 100px;
     }
-    
+    /* BIBLIOTHEQUE VISITEURS */
     .table-responsive {
         padding-right: 0;
         padding-left: 0;
@@ -425,5 +429,16 @@ p.description_bibliotheque {
 
     .pull-right {
         float: none !important;
+    }
+    
+    /* BIBLIOTHEQUE VISITEURS */
+    .table-responsive {
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    #conte {
+        margin-top: 40px;
     }
 }
