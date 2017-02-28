@@ -28,15 +28,8 @@ hr {
     font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.3em;
-    text-shadow: 2px 2px 15px #000;
-}
-
-.btn-def a {
     color: white;
-}
-
-.btn-def a:hover {
-    text-decoration: none;
+    text-shadow: 2px 2px 15px #000;
 }
 
 /* BARRE DE NAVIGATION */
@@ -139,6 +132,10 @@ p.intro {
 /* BOUTONS */
 .button-section {
     padding: 20px 0 70px 0;
+}
+
+.button-section a {
+    color: white;
 }
 
 #panda {
