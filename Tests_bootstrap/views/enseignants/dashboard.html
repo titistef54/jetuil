@@ -7,8 +7,8 @@
 
     <title>Je tu il ra...conte(s)</title>
 
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -32,17 +32,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="../index.html" class="navbar-brand">
-                <img class="logo" src="../img/logo_grenouille.png" alt="Logo du site représentant une grenouille">
+            <a href="../../index.html" class="navbar-brand">
+                <img class="logo" src="../../img/logo_grenouille.png" alt="Logo du site représentant une grenouille">
             </a>
-            <p class="navbar-text"><a href="../index.html">Je tu il ra...conte(s)</a></p>
+            <p class="navbar-text"><a href="../../index.html">Je tu il ra...conte(s)</a></p>
         </div>
         <!-- /.navbar-header -->
         <div class="collapse navbar-collapse" id="burger_menu">
             <ul class="nav navbar-nav pull-right">
-                <li><a href="../index.html">Accueil</a></li>
-                <li class="active"><a href="#">Connexion</a></li>
-                <li><a href="visiteurs/bibliotheque_visiteur.html">Bibliothèque de contes</a></li>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="#">Bibliothèque de contes</a></li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">Interface Enseignant <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Inscrire une classe</a></li>
+                        <li><a href="#">Sélectionner un conte</a></li>
+                        <li><a href="#">Créer un partenariat</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tutoriels</a></li>
+                <li><a href="../../index.html">Déconnexion</a></li>
             </ul>
         </div>
     </div>
@@ -50,44 +60,12 @@
 <!-- /.navbar.navbar-default.navbar-custom.navbar-fixed-top -->
 
 
-<!-- CONNEXION -->
-<section id="connexion">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-0 col-md-5 col-md-offset-0 col-xs-10 col-xs-offset-1 formConnexion">
-                <h2>Connexion</h2>
-                <hr>
 
-                <form action="enseignants/dashboard.html">
-                    <div class="form-group">
-                        <label for="identifiant">Identifiant :</label>
-                        <input type="text" class="form-control" id="identifiant">
-                    </div>
-                    <div class="form-group">
-                        <label for="motDePasse">Mot de passe :</label>
-                        <input type="text" class="form-control" id="motDePasse">
-                    </div>
-                    <button type="submit" class="btn btn-def btn-form center-block">Se connecter</button>
-                </form>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-xs-10 col-xs-offset-1 formConnexion">
-                <h2>Inscription</h2>
-                <hr>
 
-                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident, porro hic
-                    obcaecati pariatur, nihil esse recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.</p>
 
-                <a href="enseignants/inscription.html">
-                    <button class="btn btn-def btn-form center-block">
-                        Créer mon compte
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /CONNEXION -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 
 
 <!-- FOOTER -->
@@ -131,7 +109,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- Scripts Javascript-->
-<script src="../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 </body>
 

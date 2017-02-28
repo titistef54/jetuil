@@ -280,6 +280,22 @@ p.description_bibliotheque {
     border-radius: 10px;
 }
 
+/* MENU ENSEIGNANTS / ELEVES */
+.dropdown-menu {
+    padding: 10px 0 10px 0;
+    background-color: #234;
+    width: 100%;
+}
+
+.dropdown-menu li {
+    margin-top: 10px;
+}
+
+li.dropdown.active.open > ul > li > a:hover {
+    background-color: white;
+    color: #234;
+}
+
 /* MEDIA QUERIES */
 /* --- POUR LES MOBILES --- */
 @media (max-width: 767px) {
