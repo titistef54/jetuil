@@ -11,6 +11,10 @@ hr {
     margin: 25px auto 30px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .btn-def,
 .btn-def:hover,
 .btn-def:focus,
@@ -33,7 +37,6 @@ hr {
 }
 
 /* BARRE DE NAVIGATION */
-
 .logo {
     width: 100px;
 }
@@ -49,6 +52,14 @@ p.navbar-text {
     color: darkorange !important;
     font-family: Lobster, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2.5em;
+}
+
+.navbar-text a,
+.navbar-text a:hover,
+.navbar-text a:visited,
+.navbar-text a:active {
+    color: darkorange;
+    text-decoration: none;
 }
 
 ul.nav.navbar-nav {
@@ -218,6 +229,32 @@ p.description_bibliotheque {
 .pair {
     background-color: gainsboro;
 }
+
+/* PAGE DE CONNEXION */
+#connexion {
+    padding: 140px 0 120px 0;
+    background: #5bc0de;
+}
+
+.formConnexion {
+    background: white;
+    border-radius: 5px;
+    padding: 50px 50px;
+}
+
+.btn-form,
+.btn-form:hover,
+.btn-form:focus,
+.btn-form:active,
+.btn-form:visited,
+.btn-form:link {
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    border-radius: 10px;
+}
+
 /* MEDIA QUERIES */
 /* --- POUR LES MOBILES --- */
 @media (max-width: 767px) {
@@ -285,6 +322,15 @@ p.description_bibliotheque {
     .btn-accueil-margintop-duck {
         margin-top: 100px;
     }
+
+    /* PAGE CONNEXION */
+    #connexion {
+        padding: 50px 0 50px 0;
+    }
+
+    .formConnexion {
+        margin-top: 50px;
+    }
 }
 
 /* --- POUR LES TABLETTES(portrait) --- */
@@ -345,28 +391,4 @@ p.description_bibliotheque {
     .pull-right {
         float: none !important;
     }
-}
-
-/* PAGE DE CONNEXION */
-#connexion {
-    padding: 70px 0 70px 0;
-    background: #5bc0de;
-}
-
-.formConnexion {
-    background: white;
-    border-radius: 5px;
-    padding: 50px 50px;
-}
-
-.btn-form,
-.btn-form:hover,
-.btn-form:focus,
-.btn-form:active,
-.btn-form:visited,
-.btn-form:link {
-    height: 50px;
-    width: 150px;
-    color: white;
-    border-radius: 10px;
 }
