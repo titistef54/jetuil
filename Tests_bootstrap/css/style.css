@@ -255,6 +255,57 @@ p.description_bibliotheque {
 .nav-tabs > li.active > a {
     color: #555;
 }
+
+/* CREER UN CONTE*/
+#creer_conte {
+    text-align: center;
+    color: #333;
+    background: #5bc0de;
+    position: relative;
+    padding: 100px 0 40px 0;
+    z-index: 1;
+}
+
+#form_titre {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+#bouton_enregistrer {
+    border: 1px solid black;
+}
+
+#titre {
+    width: 300px;
+}
+
+.carte {
+    width: 60px;
+}
+
+#chevalier {
+    width: 75px;
+    position: absolute;
+    z-index: 0;
+    margin-left: -45px;
+    margin-top: 8px;
+}
+#alligator {
+    width: 75px;
+    position: absolute;
+    z-index: -1;
+    margin-left: 157px;
+    margin-top: -11px;
+}
+
+#bouton_enregistrer {
+    z-index: 3;
+}
+
+#ensemble_bouton {
+    padding-top: 20px;
+}
 /* PAGE DE CONNEXION */
 #connexion {
     padding: 140px 0 120px 0;
