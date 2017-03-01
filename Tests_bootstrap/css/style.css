@@ -46,6 +46,9 @@ a:hover {
     color: white;
     text-shadow: 2px 2px 4px #000;
 }
+.alert_mobile {
+    display: none;
+}
 
 /* BARRE DE NAVIGATION */
 .logo {
@@ -530,6 +533,14 @@ li.dropdown.active.open > ul > li > a:hover {
     .block-classe {
         border-radius: 00px;
     }
+    
+    /* CREATION D'UN CONTE */
+    #form_titre, #formulaire_choix, #ensemble_bouton {
+        display: none;
+    }
+    .alert_mobile {
+        display: block;
+    }
 }
 
 /* --- POUR LES TABLETTES(portrait) --- */
@@ -594,5 +605,10 @@ li.dropdown.active.open > ul > li > a:hover {
 
     #conte {
         margin-top: 40px;
+    }
+    
+    /* CREATION D'UN COMPTE*/
+    #conte {
+        padding-bottom: 30px;
     }
 }
