@@ -100,6 +100,10 @@ ul.nav.navbar-nav {
 }
 
 /* HEADER */
+.navbar-header {
+    position: relative;
+}
+
 header {
     text-align: center;
     color: #333;
@@ -531,16 +535,6 @@ li.dropdown.active.open > ul > li > a:hover {
     }
 
     .navbar-toggle {
-        position: relative;
-        float: right;
-        padding: 9px 10px;
-        margin-top: 8px;
-        margin-right: 15px;
-        margin-bottom: 8px;
-        background-color: transparent;
-        background-image: none;
-        border: 1px solid transparent;
-        border-radius: 4px;
         display: block;
     }
 
