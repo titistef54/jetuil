@@ -1,5 +1,5 @@
 $(window).scroll(function () {
-    if($(window).scrollTop() > 200) {
+    if($(window).scrollTop() > 150) {
         $('.logo').css({'width': '45px', 'transition-duration': '1.5s'});
         $('.navbar-brand').css({'padding': '5px 15px', 'transition-duration': '1.5s'});
     } else {

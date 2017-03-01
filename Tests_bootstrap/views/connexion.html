@@ -58,7 +58,7 @@
                 <h2>Connexion</h2>
                 <hr>
 
-                <form action="enseignants/dashboard.html">
+                <form action="#" method="post" id="connexion-form">
                     <div class="form-group">
                         <label for="identifiant">Identifiant :</label>
                         <input type="text" class="form-control" id="identifiant">
@@ -67,7 +67,7 @@
                         <label for="motDePasse">Mot de passe :</label>
                         <input type="text" class="form-control" id="motDePasse">
                     </div>
-                    <button type="submit" class="btn btn-def btn-form center-block">Se connecter</button>
+                    <button type="submit" class="btn btn-def btn-form center-block" name="connexion">Se connecter</button>
                 </form>
             </div>
             <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-xs-10 col-xs-offset-1 formConnexion">
@@ -127,6 +127,7 @@
     </div>
 </footer>
 <!-- /FOOTER -->
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -135,6 +136,21 @@
 
 <!-- Script pour réduire la taille du Logo -->
 <script src="../js/reziseLogo.js"></script>
+
+<!-- Script pour rediriger en fonction de l'utilisateur -->
+<script>
+    $(function () {
+       $(":submit[name='connexion']").on("click", function () {
+
+           if( $('#identifiant').val() == 'élève') {
+               $('#connexion-form').attr('action', 'eleves/dashboard.html');
+           } else {
+               $('#connexion-form').attr('action', 'enseignants/dashboard.html');
+           }
+
+       });
+    });
+</script>
 
 </body>
 
