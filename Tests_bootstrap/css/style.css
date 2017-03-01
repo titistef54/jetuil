@@ -406,6 +406,10 @@ li.dropdown.open > ul > li > a:hover {
     border-radius: 10px;
 }
 
+.btn-form-border {
+    border:1px solid #2C3E50;
+}
+
 /* MENU ENSEIGNANTS / ELEVES */
 .dropdown-menu {
     padding: 10px 0 10px 0;
@@ -459,6 +463,23 @@ li.dropdown.active.open > ul > li > a:hover {
 .ajout-eleve {
     width: 35px;
     cursor: pointer;
+}
+
+.btn-big,
+.btn-big:hover,
+.btn-big:active,
+.btn-big:focus {
+    width: 350px;
+}
+
+/* Tutoriels */
+#tutoriels p {
+    font-size: large;
+    font-weight: bold;
+}
+
+#tutoriels div:nth-child(n+4) p {
+    margin-top: 50px;
 }
 
 /* MEDIA QUERIES */
@@ -623,6 +644,11 @@ li.dropdown.active.open > ul > li > a:hover {
 
     .navbar-nav > li > .dropdown-menu {
         text-align: center;
+    }
+
+    /* PAGE CONNEXION */
+    #connexion > div > div > div.col-lg-5.col-lg-offset-2.col-md-5.col-md-offset-2.col-xs-10.col-xs-offset-1.formConnexion {
+        margin-top: 50px;
     }
     
     /* BIBLIOTHEQUE VISITEURS */
