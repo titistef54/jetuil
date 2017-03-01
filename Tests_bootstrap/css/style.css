@@ -326,9 +326,10 @@ li.dropdown.open > ul > li > a:hover {
     color: darkorange;
 }
 
-
-
-
+/* MODIFICATION D'UN CONTE */
+.date_modif {
+    margin-left: 30px;
+}
 /* CREER UN CONTE*/
 #creer_conte {
     text-align: center;
