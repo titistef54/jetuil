@@ -240,17 +240,40 @@ p.description_bibliotheque {
     font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.titre {
+    background-color: #2C3E50;
+    color: orange;
+    text-align: center;
+}
+
 .impair {
-    background-color: gray;
+    background-color: orange!important;
+}
+
+.impair a, .impair td {
+    color: #2C3E50;
+    font-weight: bold;
 }
 
 .pair {
-    background-color: gainsboro;
+    background-color: #2C3E50 !important;
+}
+
+.pair a, .pair td {
+    color: orange;
+    font-weight: bold;
+}
+
+
+.color-form {
+    color: orange;
+    font-weight: bold;
+    background-color: #2C3E50;
 }
 
 .content_bibliotheque {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     padding: 20px;
     text-align: justify;
 }
@@ -292,7 +315,8 @@ p.description_bibliotheque {
 }
 
 .carte {
-    width: 60px;
+    width: 70px;
+    height: 60px;
 }
 
 #chevalier {
@@ -316,6 +340,10 @@ p.description_bibliotheque {
 
 #ensemble_bouton {
     padding-top: 20px;
+}
+.col-xs-4.col-sm-3.col-md-2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 /* PAGE DE CONNEXION */
 #connexion {
