@@ -298,20 +298,22 @@ p.description_bibliotheque {
 }
 
 /* BIBLIOTHEQUE DE CONTES(ELEVES)*/
+
 li.dropdown.open > ul > li > a:hover {
     background-color: white;
     color: #234;
 }
 
-#menu_bibliotheque_eleves:focus {
+#menu_interface:focus {
     background-color: #2C3E50;
     color: white;
 }
-#menu_bibliotheque_eleves:link {
+
+#menu_interface:link {
     background-color: #2C3E50;
 }
 
-#menu_bibliotheque_eleves:active {
+#menu_interface:active {
     color: darkorange;
 }
 .dropdown-menu-active {
@@ -323,6 +325,7 @@ li.dropdown.open > ul > li > a:hover {
 .navbar-default .navbar-nav > .open > a:focus {
     color: darkorange;
 }
+
 
 
 
