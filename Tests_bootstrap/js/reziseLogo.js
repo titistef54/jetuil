@@ -1,4 +1,4 @@
-if (window.matchMedia("(min-width: 768px)").matches) {
+if (window.matchMedia("(min-width: 993px)").matches) {
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 150) {
