@@ -426,6 +426,7 @@ li.dropdown.active.open > ul > li > a:hover {
 
 .ajout-eleve {
     width: 35px;
+    cursor: pointer;
 }
 
 /* MEDIA QUERIES */
@@ -463,6 +464,10 @@ li.dropdown.active.open > ul > li > a:hover {
         text-align: center;
     }
 
+    .navbar-nav > li > .dropdown-menu {
+        text-align: center;
+    }
+
     .pull-right {
         float: none !important;
     }
@@ -495,6 +500,7 @@ li.dropdown.active.open > ul > li > a:hover {
     .btn-accueil-margintop-duck {
         margin-top: 100px;
     }
+
     /* BIBLIOTHEQUE VISITEURS */
     .table-responsive {
         padding-right: 0;
@@ -510,6 +516,7 @@ li.dropdown.active.open > ul > li > a:hover {
         width: 200px;
         margin: auto;
     }
+
     /* PAGE CONNEXION */
     #connexion {
         padding: 50px 0 50px 0;
@@ -517,6 +524,11 @@ li.dropdown.active.open > ul > li > a:hover {
 
     .formConnexion {
         margin-top: 50px;
+    }
+
+    /* INSCRIRE_CLASSE */
+    .block-classe {
+        border-radius: 00px;
     }
 }
 
@@ -567,6 +579,10 @@ li.dropdown.active.open > ul > li > a:hover {
 
     .pull-right {
         float: none !important;
+    }
+
+    .navbar-nav > li > .dropdown-menu {
+        text-align: center;
     }
     
     /* BIBLIOTHEQUE VISITEURS */
