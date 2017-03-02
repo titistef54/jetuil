@@ -389,6 +389,8 @@ li.dropdown.open > ul > li > a:hover {
 #connexion {
     padding: 120px 0 120px 0;
     background: #5bc0de;
+    position: relative;
+    z-index: 1;
 }
 
 .formConnexion {
@@ -414,6 +416,57 @@ li.dropdown.open > ul > li > a:hover {
     border:1px solid #2C3E50;
 }
 
+#elephant {
+    position: absolute;
+    top: -75px;
+    right: 35px;
+    width: 100px;
+    z-index: -1;
+}
+
+#batman {
+    position: absolute;
+    bottom: -70px;
+    right: 50px;
+    width: 80px;
+    z-index: -1;
+    transform: rotate(180deg);
+}
+
+#renard {
+    position: absolute;
+    left: -65px;
+    top: 90px;
+    width: 90px;
+    z-index: -1;
+    transform: rotate(315deg);
+}
+
+/* INSCRIPTION */
+#escargot {
+    width: 100px;
+    position: absolute;
+    top: -80px;
+    right: 80px;
+}
+
+#abeille {
+    width: 70px;
+    position: absolute;
+    bottom: 21%;
+    right: 23%;
+    transform: rotate(30deg);
+}
+
+#rat {
+    width: 80px;
+    position: absolute;
+    bottom: 80px;
+    left: -50px;
+    transform: rotate(310deg);
+    z-index: -1;
+}
+
 /* MENU ENSEIGNANTS / ELEVES */
 .dropdown-menu {
     padding: 10px 0 10px 0;
@@ -434,6 +487,8 @@ li.dropdown.active.open > ul > li > a:hover {
 #section_enseignants {
     padding: 80px 0 80px 0;
     background: #5bc0de;
+    position: relative;
+    z-index: 0;
 }
 
 /* INSCRIRE_CLASSE */
@@ -441,6 +496,27 @@ li.dropdown.active.open > ul > li > a:hover {
     border-radius: 10px;
     background-color: white;
     padding:50px 10px;
+}
+
+#enfant {
+    width: 80px;
+    position: absolute;
+    top: -95px;
+    right: 8%;
+}
+
+#cahier {
+    width: 100px;
+    position: absolute;
+    bottom: -110px;
+    left: 32%;
+}
+
+#demoiselle {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 200px;
 }
 
 .table-classe {
@@ -476,13 +552,37 @@ li.dropdown.active.open > ul > li > a:hover {
     width: 350px;
 }
 
-/* Tutoriels */
+/* PARTENARIAT */
+#fairy {
+    width: 70px;
+    position: absolute;
+    top: -110px;
+    right: 80px;
+    transform: rotate(20deg);
+}
+
+#attachecase {
+    width: 80px;
+    position: absolute;
+    bottom: 10px;
+    right: 250px;
+}
+
+/* TUTORIELS */
+#math {
+    width: 100px;
+    position: absolute;
+    top: -95px;
+    right: 220px;
+    z-index: -1;
+}
+
 #tutoriels p {
     font-size: large;
     font-weight: bold;
 }
 
-#tutoriels div:nth-child(n+4) p {
+#tutoriels div:nth-child(n+5) p {
     margin-top: 50px;
 }
 
@@ -583,9 +683,46 @@ li.dropdown.active.open > ul > li > a:hover {
         margin-top: 50px;
     }
 
+    .media-margintop {
+        margin-top: 100px;
+    }
+
+    #renard {
+        left: -55px;
+        transform: rotate(300deg);
+    }
+
+    #batman {
+        right: auto;
+    }
+
+    /* INSCRIPTION */
+    #abeille, #rat {
+        display: none;
+    }
+
+    #escargot {
+        width: 70px;
+        top: -50px;
+    }
+
     /* INSCRIRE_CLASSE */
     .block-classe {
         border-radius: 00px;
+    }
+
+    #enfant {
+        top: 60px;
+    }
+
+    #cahier {
+        width: 70px;
+        bottom: -85px;
+        left: 40px;
+    }
+
+    #demoiselle {
+        right: 70px;
     }
     
     /* CREATION D'UN CONTE */
@@ -651,8 +788,37 @@ li.dropdown.active.open > ul > li > a:hover {
     }
 
     /* PAGE CONNEXION */
-    #connexion > div > div > div.col-lg-5.col-lg-offset-2.col-md-5.col-md-offset-2.col-xs-10.col-xs-offset-1.formConnexion {
-        margin-top: 50px;
+    #batman {
+        right: auto;
+    }
+
+    .media-margintop {
+        margin-top: 100px;
+    }
+
+    /* INSCRIPTION */
+    #abeille {
+        display: none;
+    }
+
+    /* INSCRIRE CLASSE */
+    #cahier {
+        width: 70px;
+        bottom: -85px;
+        left: 80px;
+    }
+
+    #demoiselle {
+        right: 85px;
+    }
+
+    /* PARTENARIAT */
+    #fairy {
+        right: 10px;
+    }
+
+    #attachecase {
+        right: 30px;
     }
     
     /* BIBLIOTHEQUE VISITEURS */
@@ -669,5 +835,17 @@ li.dropdown.active.open > ul > li > a:hover {
     /* CREATION D'UN COMPTE*/
     #conte {
         padding-bottom: 30px;
+    }
+    
+}
+
+/* Resolution entre 993px et 1200px */
+@media (min-width: 993px) and (max-width: 1200px) {
+    #cahier {
+        display: none;
+    }
+
+    #attachecase {
+        right: 130px;
     }
 }
