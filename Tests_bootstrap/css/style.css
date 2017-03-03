@@ -497,6 +497,16 @@ li.dropdown.active.open > ul > li > a:hover {
     z-index: 0;
 }
 
+.cache {
+    background: white;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
 /* INSCRIRE_CLASSE */
 .block-classe {
     border-radius: 10px;
