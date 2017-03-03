@@ -297,6 +297,13 @@ p.description_bibliotheque {
     color: #555;
 }
 
+#img_lion {
+    width: 200px;
+    position: absolute;
+    margin-left: 567px;
+    margin-top: 173px;
+}
+
 /* BIBLIOTHEQUE DE CONTES(ELEVES)*/
 
 li.dropdown.open > ul > li > a:hover {
@@ -346,10 +353,6 @@ li.dropdown.open > ul > li > a:hover {
     padding-top: 40px;
 }
 
-#bouton_enregistrer {
-    border: 1px solid black;
-}
-
 #titre {
     width: 300px;
 }
@@ -375,6 +378,7 @@ li.dropdown.open > ul > li > a:hover {
 }
 
 #bouton_enregistrer {
+    border: 1px solid black;
     z-index: 3;
 }
 
