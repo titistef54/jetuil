@@ -248,13 +248,15 @@ p.description_bibliotheque {
 }
 
 .titre {
-    background-color: #2C3E50;
-    color: orange;
-    text-align: center;
+    background-color: #f7f8f9;
+    color: #333;
 }
 
+.titre th {
+    text-align: center;
+}
 .impair {
-    background-color: orange!important;
+    background-color: #c9c5c1 !important;
 }
 
 .impair a, .impair td {
@@ -263,19 +265,19 @@ p.description_bibliotheque {
 }
 
 .pair {
-    background-color: #2C3E50 !important;
+    background-color: #fff !important;
 }
 
 .pair a, .pair td {
-    color: orange;
+    color: #333;
     font-weight: bold;
 }
 
 
 .color-form {
-    color: orange;
+    color: #333;
     font-weight: bold;
-    background-color: #2C3E50;
+    background-color: #f7f8f9;
 }
 
 .content_bibliotheque {
@@ -663,10 +665,9 @@ li.dropdown.active.open > ul > li > a:hover {
     }
 
     /* BIBLIOTHEQUE VISITEURS */
-    .table-responsive {
+    #tableau_conte_visiteurs {
         padding-right: 0;
         padding-left: 0;
-        margin-top: 40px;
     }
 
     #conte {
@@ -730,7 +731,7 @@ li.dropdown.active.open > ul > li > a:hover {
     }
     
     /* CREATION D'UN CONTE */
-    #form_titre, #formulaire_choix, #ensemble_bouton {
+    #form_titre, #ensemble_bouton {
         display: none;
     }
     .alert_mobile {
@@ -829,7 +830,6 @@ li.dropdown.active.open > ul > li > a:hover {
     .table-responsive {
         padding-right: 0;
         padding-left: 0;
-        margin-top: 40px;
     }
 
     #conte {
@@ -842,7 +842,6 @@ li.dropdown.active.open > ul > li > a:hover {
     }
     
 }
-
 /* Resolution entre 993px et 1200px */
 @media (min-width: 993px) and (max-width: 1200px) {
     #cahier {
