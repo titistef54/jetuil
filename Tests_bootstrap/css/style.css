@@ -731,13 +731,22 @@ li.dropdown.active.open > ul > li > a:hover {
     }
 
     #cahier {
-        width: 70px;
-        bottom: -85px;
+        width: 50px;
+        bottom: -65px;
         left: 40px;
     }
 
     #demoiselle {
         right: 70px;
+    }
+
+    /* TUTORIELS */
+    #math {
+        display: none;
+    }
+
+    #tutoriels div:nth-child(n+3) p {
+        margin-top: 30px;
     }
     
     /* CREATION D'UN CONTE */
@@ -818,8 +827,8 @@ li.dropdown.active.open > ul > li > a:hover {
 
     /* INSCRIRE CLASSE */
     #cahier {
-        width: 70px;
-        bottom: -85px;
+        width: 50px;
+        bottom: -65px;
         left: 80px;
     }
 
@@ -834,6 +843,15 @@ li.dropdown.active.open > ul > li > a:hover {
 
     #attachecase {
         right: 30px;
+    }
+
+    /* TUTORIELS */
+    #math {
+        right: 80px;
+    }
+
+    #tutoriels div:nth-child(n+3) p {
+        margin-top: 30px;
     }
     
     /* BIBLIOTHEQUE VISITEURS */
@@ -852,6 +870,28 @@ li.dropdown.active.open > ul > li > a:hover {
     }
     
 }
+
+/* Résolution entre 993px et 1100px */
+@media (min-width: 993px) and (max-width: 1100px) {
+    /* navbar */
+    .logo {
+        width: 40px;
+    }
+
+    .navbar-brand {
+        padding: 6px 15px;
+    }
+
+    p.navbar-text {
+        font-size: 2.3em;
+    }
+
+    /* TUTORIELS */
+    #math {
+        right: 80px;
+    }
+}
+
 /* Resolution entre 993px et 1200px */
 @media (min-width: 993px) and (max-width: 1200px) {
     #cahier {
