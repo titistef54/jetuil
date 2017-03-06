@@ -868,32 +868,44 @@ li.dropdown.active.open > ul > li > a:hover {
     #image_bibliotheque_visiteurs {
         width: 446px;
         position: absolute;
-        bottom: -203px;
+        bottom: 234px;
         left: 75px;
+    }
+    footer {
+        position: relative;
     }
 }
 @media (min-width: 1281px) and (max-width: 1440px) {
     #image_bibliotheque_visiteurs {
         width: 531px;
         position: absolute;
-        bottom: -306px;
+        bottom: 234px;
         left: 29px;
+    }
+    footer {
+        position: relative
     }
 }
 @media (min-width: 1201px) and (max-width: 1280px) {
     #image_bibliotheque_visiteurs {
         width: 446px;
         position: absolute;
-        bottom: -348px;
+        bottom: 234px;
         left: 24px;
+    }
+    footer {
+        position: relative;
     }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
     #image_bibliotheque_visiteurs {
         width: 446px;
         position: absolute;
-        bottom: -438px;
+        bottom: 234px;
         left: 24px;
+    }
+    footer {
+        position: relative;
     }
 }
 @media (max-width: 1199px) {
