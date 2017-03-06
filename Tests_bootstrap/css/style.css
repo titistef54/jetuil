@@ -391,6 +391,16 @@ li.dropdown.open > ul > li > a:hover {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
+.sons,
+.personnages,
+.animaux,
+.decors,
+.objets,
+.nourriture {
+ margin-bottom: 15px;   
+}
+
 /* PAGE DE CONNEXION */
 #connexion {
     padding: 120px 0 120px 0;
@@ -603,6 +613,11 @@ li.dropdown.active.open > ul > li > a:hover {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 1199px) {
+    #onglets {
+        margin-top: 25px;
+    }
+}
 /* --- POUR LES MOBILES --- */
 @media (max-width: 767px) {
     body {
