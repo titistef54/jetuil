@@ -764,8 +764,10 @@ li.dropdown.active.open > ul > li > a:hover {
         margin-top: 30px;
     }
     
-    /* CREATION D'UN CONTE */
-    #form_titre, #ensemble_bouton {
+    /* CREATION D'UN CONTE(impossibilité de création de conte en mobile) */
+    #form_titre,
+    #ensemble_bouton,
+    #formulaire_choix {
         display: none;
     }
     .alert_mobile {
