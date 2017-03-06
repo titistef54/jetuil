@@ -49,6 +49,9 @@ a:hover {
 .alert_mobile {
     display: none;
 }
+.alert_mobile_modification {
+        display: none;
+    }
 
 /* BARRE DE NAVIGATION */
 .logo {
@@ -771,6 +774,9 @@ li.dropdown.active.open > ul > li > a:hover {
         display: none;
     }
     .alert_mobile {
+        display: block;
+    }
+    .alert_mobile_modification {
         display: block;
     }
 }
