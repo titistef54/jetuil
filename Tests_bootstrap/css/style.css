@@ -862,3 +862,42 @@ li.dropdown.active.open > ul > li > a:hover {
         right: 130px;
     }
 }
+
+/* Responsive pour les images */
+@media (min-width: 1441px) and (max-width: 1680px) {
+    #image_bibliotheque_visiteurs {
+        width: 446px;
+        position: absolute;
+        bottom: -203px;
+        left: 75px;
+    }
+}
+@media (min-width: 1281px) and (max-width: 1440px) {
+    #image_bibliotheque_visiteurs {
+        width: 531px;
+        position: absolute;
+        bottom: -306px;
+        left: 29px;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1280px) {
+    #image_bibliotheque_visiteurs {
+        width: 446px;
+        position: absolute;
+        bottom: -348px;
+        left: 24px;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #image_bibliotheque_visiteurs {
+        width: 446px;
+        position: absolute;
+        bottom: -438px;
+        left: 24px;
+    }
+}
+@media (max-width: 1199px) {
+    #image_bibliotheque_visiteurs {
+        display: none;
+    }
+}
