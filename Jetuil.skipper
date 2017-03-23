@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<skipper version="3.2.10.1363" mvc="Symfony3" orm="Doctrine2" name="Jetuil" uuid="d23c2f64-2000-4204-8f0d-52eebfa9f1bf">
+  <module name="\PlatformBundle" local-name="PlatformBundle" namespace="\" export-format="Doctrine2Php" export-path="../../../Downloads/ORM Doctrine 2" uuid="5c72ce28-d7c4-4a0b-8087-4f583f16968d">
+    <entity name="\JTIR\PlatformBundle\Entity\Enseignant" local-name="Enseignant" namespace="\JTIR\PlatformBundle\Entity" local-namespace="JTIR\PlatformBundle\Entity" uuid="d9560468-38b4-44dc-85ff-079000e943ce">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="5c4659c2-6f8a-48e5-8d08-fc4ea093843a"/>
+      <field name="civ" description="La civilit&#xE9; de l'enseignant" type="string" size="5" required="true" uuid="3d5b9cfa-4117-41f4-b380-840cfee5ffba"/>
+      <field name="nom" type="string" size="30" required="true" uuid="d6afe2dd-3a78-4183-abdf-4d4a184831b7"/>
+      <field name="prenom" type="string" size="30" required="true" uuid="cfc7b728-f9ad-4428-ace4-cd504a3d4eb4"/>
+      <field name="email" type="string" size="75" required="true" uuid="f583de99-a8e9-4489-b519-9895d091373e"/>
+      <field name="identifiant" type="string" size="20" required="true" uuid="fdcd32ea-4f37-47b3-affd-db02007eed06"/>
+      <field name="motdepasse" type="string" size="255" required="true" uuid="5b17d9c9-64fa-4bfb-9190-1f81d47cfd64"/>
+      <field name="adresse_id" type="integer" unique="true" uuid="8a78ae2f-4245-4999-bf55-763205518050"/>
+    </entity>
+    <association from="\JTIR\PlatformBundle\Entity\Enseignant" to="\JTIR\PlatformBundle\Entity\Adresse" caption="Adresse Enseignant" owner-alias="enseignant" inverse-alias="adresse" many-owner="false" many-inverse="false" uuid="c6f29449-c6e5-4bf5-abb0-237abfb3464e">
+      <association-field from="adresse_id" to="id"/>
+      <orm-attributes>
+        <attribute name="on-delete">CASCADE</attribute>
+      </orm-attributes>
+    </association>
+    <entity name="\JTIR\PlatformBundle\Entity\Classe" local-name="Classe" namespace="\JTIR\PlatformBundle\Entity" local-namespace="JTIR\PlatformBundle\Entity" uuid="a3439ebc-fd5b-4bbf-8b34-b9e479faab8e">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="e40cbdb4-5a55-4b37-bff4-ff8f2d57d606"/>
+      <field name="niveau" type="string" size="3" required="true" uuid="9ab4f347-b979-432a-9e65-31aabbbb8d29"/>
+      <field name="enseignant_id" type="integer" uuid="d071afa5-d406-4214-8e0f-95cc696ecf33"/>
+      <field name="adresse_id" type="integer" unique="true" uuid="5e18bb8d-b292-4c8b-8a43-d799c183a004"/>
+      <field name="classe_id" type="integer" uuid="baeb9698-0786-4e86-af5f-bde0dfe88ba0"/>
+    </entity>
+    <association from="\JTIR\PlatformBundle\Entity\Classe" to="\JTIR\PlatformBundle\Entity\Enseignant" caption="Enseignant Classe" owner-alias="classe" inverse-alias="enseignant" many-owner="true" many-inverse="false" uuid="6305ffa7-3218-4aed-a84f-253e9ce4510a">
+      <association-field from="enseignant_id" to="id"/>
+    </association>
+    <association from="\JTIR\PlatformBundle\Entity\Classe" to="\JTIR\PlatformBundle\Entity\Adresse" caption="Adresse Classe" owner-alias="classe" inverse-alias="adresse" many-owner="false" many-inverse="false" uuid="954e8474-595e-4958-8f7f-2f6fc560f392">
+      <association-field from="adresse_id" to="id"/>
+      <orm-attributes>
+        <attribute name="on-delete">CASCADE</attribute>
+        <attribute name="on-update">CASCADE</attribute>
+      </orm-attributes>
+    </association>
+    <association from="\JTIR\PlatformBundle\Entity\Classe" to="\JTIR\PlatformBundle\Entity\Classe" caption="Classe Classe" owner-alias="EP_classe" inverse-alias="EI_classe" many-owner="true" many-inverse="false" uuid="b34537b9-7e23-42ea-aaf1-cdf3042740ce">
+      <association-field from="classe_id" to="id"/>
+    </association>
+    <entity name="\JITR\PlatformBundle\Entity\Eleve" local-name="Eleve" namespace="\JITR\PlatformBundle\Entity" local-namespace="JITR\PlatformBundle\Entity" uuid="e8589c1f-7dc0-45b0-8314-9756a825c039">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="ed50b244-6127-48d6-8c4c-2cad277098f0"/>
+      <field name="nom" type="string" size="20" required="true" uuid="5e4014d0-f6f9-4095-ae97-bcd500ce2042"/>
+      <field name="prenom" type="string" size="20" required="true" uuid="7f9580ad-c28b-4cd9-9e58-07621e65572e"/>
+      <field name="motdepasse" type="string" size="255" required="true" uuid="795e64f1-39f9-4a83-b1b6-4324b830cbdf"/>
+      <field name="classe_id" type="integer" uuid="caa9c600-ac38-4897-bcde-bb476e78c33d"/>
+    </entity>
+    <association from="\JITR\PlatformBundle\Entity\Eleve" to="\JTIR\PlatformBundle\Entity\Classe" caption="Classe Eleve" owner-alias="eleve" inverse-alias="classe" many-owner="true" many-inverse="false" uuid="f65d705f-231c-4d5b-be99-b6acb05ba580">
+      <association-field from="classe_id" to="id"/>
+      <orm-attributes>
+        <attribute name="on-delete">CASCADE</attribute>
+      </orm-attributes>
+    </association>
+    <entity name="\JTIR\PlatformBundle\Entity\Conte" local-name="Conte" namespace="\JTIR\PlatformBundle\Entity" local-namespace="JTIR\PlatformBundle\Entity" uuid="fdf75629-d397-407f-9b0b-e5da3f79f6ea">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="3a9bc400-def5-4831-a4d6-f2b2dda7bfaa"/>
+      <field name="titre" type="string" size="100" required="true" uuid="b0992720-e978-4762-9d18-cfc5180360e1"/>
+      <field name="situationInitiale" type="text" uuid="47e44b0d-2463-48c9-a6be-7bc89d3090e7"/>
+      <field name="elementDeclencheur" type="text" uuid="661d1ccc-47c2-441f-9bc9-766a6d022ecf"/>
+      <field name="peripetie" type="text" uuid="668fcfeb-5d04-4a1b-8930-c70eadeed2e3"/>
+      <field name="denouement" type="text" uuid="1b7ec583-59af-42b5-8658-c51bcf800a98"/>
+      <field name="situationFinale" type="text" uuid="9884f1d7-fa70-472c-9ebe-8b2f2b8d2064"/>
+      <field name="date" type="date" required="true" uuid="e084be3a-7f71-4770-b688-47f35d7cb99c"/>
+      <field name="partage" description="Permet d'activer le partage du conte. Si le partage est activ&#xE9;, un autre &#xE9;l&#xE8;ve peut travailler sur ce conte." type="boolean" default="true" required="true" uuid="43704a56-950e-4bf3-a831-dbcc9e9f1745"/>
+      <field name="eleve_id" type="integer" uuid="86ffc5b7-332f-434c-8f6a-7b0a899b6ae5"/>
+    </entity>
+    <association from="\JTIR\PlatformBundle\Entity\Conte" to="\JITR\PlatformBundle\Entity\Eleve" caption="Eleve Conte" owner-alias="conte" inverse-alias="eleve" many-owner="true" many-inverse="false" uuid="049e9b90-2769-4abb-9770-20d489265d78">
+      <association-field from="eleve_id" to="id"/>
+    </association>
+    <entity name="\JTIR\PlatformBundle\Entity\Adresse" local-name="Adresse" namespace="\JTIR\PlatformBundle\Entity" local-namespace="JTIR\PlatformBundle\Entity" uuid="db81b934-3635-4bf4-a3b6-d8e592031ec3">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="2aea3e8c-82fc-48b5-a895-2859208f4f19"/>
+      <field name="departement" type="string" size="50" required="true" uuid="0567cfdc-8ded-44f3-9b69-7b29ebf213b8"/>
+      <field name="ville" type="string" size="50" required="true" uuid="f3a45b96-6445-4a86-b55e-271a314f45ac"/>
+      <field name="etablissement" type="string" size="100" required="true" uuid="f9d79565-a2a2-4502-8eb6-a3ec178690a0"/>
+    </entity>
+  </module>
+  <visual-data>
+    <association uuid="049e9b90-2769-4abb-9770-20d489265d78" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="6305ffa7-3218-4aed-a84f-253e9ce4510a" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="954e8474-595e-4958-8f7f-2f6fc560f392" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="b34537b9-7e23-42ea-aaf1-cdf3042740ce" caption1-position-x="2" caption1-position-y="1" center-position-x="0" center-position-y="-36" color="#969696"/>
+    <association uuid="c6f29449-c6e5-4bf5-abb0-237abfb3464e" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="f65d705f-231c-4d5b-be99-b6acb05ba580" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <entity uuid="a3439ebc-fd5b-4bbf-8b34-b9e479faab8e" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="331" position-y="146" size-x="0" size-x2="164" size-y="0" size-y2="87"/>
+    <entity uuid="d9560468-38b4-44dc-85ff-079000e943ce" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="31" position-y="146" size-x="0" size-x2="185" size-y="0" size-y2="129"/>
+    <entity uuid="db81b934-3635-4bf4-a3b6-d8e592031ec3" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="197" position-y="3" size-x="0" size-x2="169" size-y="0" size-y2="73"/>
+    <entity uuid="e8589c1f-7dc0-45b0-8314-9756a825c039" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="373" position-y="350" size-x="0" size-x2="158" size-y="0" size-y2="87"/>
+    <entity uuid="fdf75629-d397-407f-9b0b-e5da3f79f6ea" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="44" position-y="323" size-x="0" size-x2="161" size-y="0" size-y2="157"/>
+    <module uuid="5c72ce28-d7c4-4a0b-8087-4f583f16968d" bg-color="#E7F5FD" position-x="-39" position-y="22" size-x="11" size-x2="603" size-y="22" size-y2="503"/>
+    <project uuid="d23c2f64-2000-4204-8f0d-52eebfa9f1bf" size-x="142" size-x2="673" size-y="25" size-y2="600"/>
+  </visual-data>
+</skipper>
