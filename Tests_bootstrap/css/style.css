@@ -50,8 +50,8 @@ a:hover {
     display: none;
 }
 .alert_mobile_modification {
-        display: none;
-    }
+    display: none;
+}
 
 /* BARRE DE NAVIGATION */
 .logo {
@@ -85,15 +85,11 @@ ul.nav.navbar-nav {
     font-family: Lato, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.navbar-custom .navbar-nav li.active a {
-    background: #234;
-    color: darkorange;
-}
-
+.navbar-custom .navbar-nav li.active a,
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus {
     background: #234;
-    color: white;
+    color: #5bc0de;
 }
 
 .navbar-custom .navbar-nav li a,
@@ -103,6 +99,20 @@ ul.nav.navbar-nav {
 
 .navbar-custom .navbar-nav li a:hover {
     color: white;
+}
+
+#burger_menu > ul > li.dropdown.active.open > ul > li > a {
+    color: darkorange;
+}
+
+#burger_menu > ul > li.dropdown.active.open > ul > li.active > a,
+#burger_menu > ul > li.dropdown.active.open > ul > li.active > a:hover {
+    color: #5bc0de;
+    background: black;
+}
+
+#burger_menu > ul > li.dropdown.active.open > ul > li > a:hover {
+    color: #234;
 }
 
 /* HEADER */
@@ -117,8 +127,8 @@ header {
 }
 
 header .container {
-    padding-top: 70px;
-    padding-bottom: 100px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .name {
@@ -134,7 +144,7 @@ header .container {
 
 /* INTRODUCTION */
 #introduction {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 #introduction .row {
@@ -216,6 +226,12 @@ footer h3 {
     padding: 0;
 }
 
+.apropos {
+    color: #18BC9C;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
 .footer-green {
     color: #18BC9C;
 }
@@ -228,6 +244,10 @@ footer h3 {
     padding: 15px 0;
     background-color: #233140;
     color: white;
+}
+
+footer > div.footer-below > div > div > div > a > img {
+    width: 30px;
 }
 
 /* BIBLIOTHEQUE DE CONTES (VISITEURS)*/
@@ -336,6 +356,7 @@ li.dropdown.open > ul > li > a:hover {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
     color: darkorange;
+    background: #234;
 }
 
 /* MODIFICATION D'UN CONTE */
@@ -353,6 +374,7 @@ li.dropdown.open > ul > li > a:hover {
 }
 
 #form_titre {
+    width: 500px;
     text-align: left;
     padding-left: 20px;
     padding-top: 40px;
@@ -401,7 +423,7 @@ li.dropdown.open > ul > li > a:hover {
 .decors,
 .objets,
 .nourriture {
- margin-bottom: 15px;   
+    margin-bottom: 15px;
 }
 
 /* PAGE DE CONNEXION */
@@ -628,7 +650,7 @@ li.dropdown.active.open > ul > li > a:hover {
     }
 
     header .container {
-        padding-bottom: 45px;
+        padding: 60px 0 30px 0;
     }
 
     .logo {
@@ -701,7 +723,7 @@ li.dropdown.active.open > ul > li > a:hover {
     #conte {
         margin-top: 40px;
     }
-    
+
     .nav-tabs.nav-justified {
         width: 200px;
         margin: auto;
@@ -766,7 +788,7 @@ li.dropdown.active.open > ul > li > a:hover {
     #tutoriels div:nth-child(n+3) p {
         margin-top: 30px;
     }
-    
+
     /* CREATION D'UN CONTE(impossibilité de création de conte en mobile) */
     #form_titre,
     #ensemble_bouton,
@@ -876,7 +898,7 @@ li.dropdown.active.open > ul > li > a:hover {
     #tutoriels div:nth-child(n+3) p {
         margin-top: 30px;
     }
-    
+
     /* BIBLIOTHEQUE VISITEURS */
     .table-responsive {
         padding-right: 0;
@@ -886,12 +908,12 @@ li.dropdown.active.open > ul > li > a:hover {
     #conte {
         margin-top: 40px;
     }
-    
+
     /* CREATION D'UN COMPTE*/
     #conte {
         padding-bottom: 30px;
     }
-    
+
 }
 
 /* Résolution entre 993px et 1100px */
@@ -935,7 +957,7 @@ li.dropdown.active.open > ul > li > a:hover {
     #image_bibliotheque_visiteurs {
         width: 446px;
         position: absolute;
-        bottom: 234px;
+        bottom: 334px;
         left: 75px;
     }
     footer {
@@ -946,7 +968,7 @@ li.dropdown.active.open > ul > li > a:hover {
     #image_bibliotheque_visiteurs {
         width: 531px;
         position: absolute;
-        bottom: 234px;
+        bottom: 334px;
         left: 29px;
     }
     footer {
@@ -957,7 +979,7 @@ li.dropdown.active.open > ul > li > a:hover {
     #image_bibliotheque_visiteurs {
         width: 446px;
         position: absolute;
-        bottom: 234px;
+        bottom: 334px;
         left: 24px;
     }
     footer {
@@ -968,7 +990,7 @@ li.dropdown.active.open > ul > li > a:hover {
     #image_bibliotheque_visiteurs {
         width: 446px;
         position: absolute;
-        bottom: 234px;
+        bottom: 334px;
         left: 24px;
     }
     footer {

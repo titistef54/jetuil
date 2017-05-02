@@ -40,11 +40,10 @@
         <!-- /.navbar-header -->
         <div class="collapse navbar-collapse" id="burger_menu">
             <ul class="nav navbar-nav pull-right">
-                <li><a href="../../index.html">Accueil</a></li>
                 <li class="dropdown">
-                    <a href="#" id="menu_interface" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                        aria-haspopup="true" aria-expanded="false">Interface Enseignants <span class="caret"></span></a>
-                    <ul class="dropdown-menu dropdown-menu-active">
+                    <ul class="dropdown-menu">
                         <li><a href="inscrire_classe.html">Inscrire une classe</a></li>
                         <li><a href="bibliothèque_enseigants.html">Sélectionner un conte</a></li>
                         <li><a href="partenariat.html">Créer un partenariat</a></li>
@@ -112,23 +111,31 @@
     <div class="footer-above">
         <div class="container">
             <div class="row">
-                <div class="footer.col col-md-4">
+                <div class="footer.col col-md-3">
                     <h3>Plan du site</h3>
                     <ul class="sitemap">
-                        <li class="footer-green">Accueil</li>
-                        <li class="footer-green">Connexion</li>
-                        <li class="footer-green">Bibliothèque de contes</li>
+                        <li><a href="../../index.html" class="footer-green">Accueil</a></li>
+                        <li><a href="../../views/connexion.html" class="footer-green">Connexion</a></li>
+                        <li>
+                            <a href="../../views/visiteurs/bibliotheque_visiteur.html" class="footer-green">
+                                Bibliothèque de contes</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="footer-col col-md-4">
-                    <h3>Contact</h3>
-                    <p class="footer-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae iste quod
-                        ratione quia placeat.</p>
-                </div>
-                <div class="footer-col col-md-4">
+                <div class="col-lg-7 col-lg-offset-2">
                     <h3>A propos</h3>
-                    <p class="footer-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolorum
-                        blanditiis.</p>
+                    <p class="apropos">
+                        Enseignantes du premier degré en collaboration avec deux stagiaires de l'AFPA,
+                        nous avons créé ce site afin de répondre à des besoins en production d'écrits,
+                        dans le cadre de notre formation en MASTER MEEF IDP, option numérique en 2016-2017. <br>
+                        Il s'adresse aux enseignants, à leurs élèves et aux familles désireuses de consulter le travail
+                        de leurs enfants, en production de contes merveilleux.
+                        Ce site vise un public de GS, CP, CE1 mais il peut convenir également à des élèves d'autres
+                        niveaux en adaptant les différentes aides. <br>
+                        Les élèves peuvent produire, individuellement ou de manière collaborative, un conte grâce
+                        à une banque d'outils (images, sons) et/ou avec l'aide de l'enseignant.
+                        Les contes publiés sont consultables à tout moment en dehors de la classe.
+                    </p>
                 </div>
             </div>
         </div>
@@ -137,13 +144,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; 2017
+                    CC-BY-NC-SA
+                    <a href="https://fr.wikipedia.org/wiki/Licence_Creative_Commons">
+                        <img src="../../img/48px-Cc-sa_white.png" alt="Attribution">
+                        <img src="../../img/Cc-by_new_white.png" alt="Pas d'utilisation commerciale">
+                        <img src="../../img/Cc-nc_white.png"
+                             alt="Partage des conditions initiales à l'identique">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </footer>
 <!-- /FOOTER -->
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
