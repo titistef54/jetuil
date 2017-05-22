@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<skipper version="3.2.10.1370" mvc="Symfony3" orm="Doctrine2" name="Jetuil" uuid="d23c2f64-2000-4204-8f0d-52eebfa9f1bf">
+  <module name="\PlatformBundle" local-name="PlatformBundle" namespace="\JTIR\PlatformBundle" local-namespace="JTIR\PlatformBundle" export-format="Doctrine2Php" export-path="../../../Downloads/ORM Doctrine 2" uuid="5c72ce28-d7c4-4a0b-8087-4f583f16968d">
+    <entity name="\JTIR\PlatformBundle\Entity\Conte" local-name="Conte" namespace="\JTIR\PlatformBundle\Entity" local-namespace="Entity" uuid="fdf75629-d397-407f-9b0b-e5da3f79f6ea">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="3a9bc400-def5-4831-a4d6-f2b2dda7bfaa"/>
+      <field name="titre" type="string" size="100" required="true" uuid="b0992720-e978-4762-9d18-cfc5180360e1"/>
+      <field name="situationInitiale" type="text" uuid="47e44b0d-2463-48c9-a6be-7bc89d3090e7"/>
+      <field name="elementDeclencheur" type="text" uuid="661d1ccc-47c2-441f-9bc9-766a6d022ecf"/>
+      <field name="peripetie" type="text" uuid="668fcfeb-5d04-4a1b-8930-c70eadeed2e3"/>
+      <field name="denouement" type="text" uuid="1b7ec583-59af-42b5-8658-c51bcf800a98"/>
+      <field name="situationFinale" type="text" uuid="9884f1d7-fa70-472c-9ebe-8b2f2b8d2064"/>
+      <field name="date" type="date" required="true" uuid="e084be3a-7f71-4770-b688-47f35d7cb99c"/>
+      <field name="partage" description="Permet d'activer le partage du conte. Si le partage est activ&#xE9;, un autre &#xE9;l&#xE8;ve peut travailler sur ce conte." type="boolean" default="true" required="true" uuid="43704a56-950e-4bf3-a831-dbcc9e9f1745"/>
+      <field name="eleve_id" type="integer" uuid="a0616ab6-9639-471a-b36b-e85b56f67ef5"/>
+    </entity>
+    <association from="\JTIR\PlatformBundle\Entity\Conte" to="\JTIR\UserBundle\Entity\Eleve" caption="Eleve Conte" owner-alias="conte" inverse-alias="eleve" many-owner="true" many-inverse="false" uuid="344299a3-1b9b-4da1-9da2-61549c1f01ab">
+      <association-field from="eleve_id" to="id"/>
+    </association>
+    <entity name="\JTIR\PlatformBundle\Entity\Categorie" local-name="Categorie" namespace="\JTIR\PlatformBundle\Entity" local-namespace="Entity" uuid="c1944128-4ddc-4e40-a4c5-3ea8a673758a">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="32ce4f1c-1c52-42a4-be78-e24bd2c9db95"/>
+      <field name="libelle" type="string" size="20" required="true" uuid="123a7c71-56c2-4533-a786-7b97e9ad5c9a"/>
+    </entity>
+    <entity name="\JTIR\PlatformBundle\Entity\Carte" local-name="Carte" namespace="\JTIR\PlatformBundle\Entity" local-namespace="Entity" uuid="8b51d031-2737-4d8e-82b4-6a5116e12c59">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="d2e01c7f-cc96-40d6-a5bd-e426616cf939"/>
+      <field name="url" type="string" size="255" required="true" uuid="c1f1cebc-ca0c-4b5e-b095-bac78e874a61"/>
+      <field name="categorie_id" type="integer" required="true" uuid="906f6af8-7f28-47d6-98b6-b72449745e81"/>
+    </entity>
+    <association from="\JTIR\PlatformBundle\Entity\Carte" to="\JTIR\PlatformBundle\Entity\Categorie" caption="Categorie Carte" owner-alias="carte" inverse-alias="categorie" many-owner="true" many-inverse="false" parent-required="true" uuid="1d662103-6422-445b-83c8-98f866c49837">
+      <association-field from="categorie_id" to="id"/>
+    </association>
+    <entity name="\JTIR\PlatformBundle\Entity\Son" local-name="Son" namespace="\JTIR\PlatformBundle\Entity" local-namespace="Entity" uuid="c4b72611-e24b-445a-9357-db0ae7e00d6c">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="69fe73bb-a420-4038-b115-a1999865d95c"/>
+      <field name="url" type="string" size="255" required="true" uuid="b1f78b6d-f946-4bb9-af6b-6dc3aa90bffc"/>
+    </entity>
+    <entity name="\JTIR\PlatformBundle\Entity\Conte_Carte" local-name="Conte_Carte" namespace="\JTIR\PlatformBundle\Entity" local-namespace="Entity" uuid="2f2f8b4c-88b4-4ad3-947a-8e63eec3615c">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="89d1e9c6-53bf-4733-82ef-877bde1033a5"/>
+      <field name="carte_id" type="integer" required="true" primary="true" uuid="e699386a-00a6-438c-bd73-1f5b01d7ae2f"/>
+      <field name="conte_id" type="integer" required="true" primary="true" uuid="4461993a-d4f5-4648-a36c-a001c244b829"/>
+    </entity>
+    <many-to-many mn-entity="\JTIR\PlatformBundle\Entity\Conte_Carte" caption="Carte to Conte" uuid="6239c4a9-2008-453b-a331-745a5d4a1285">
+      <many-to-many-entity name="\JTIR\PlatformBundle\Entity\Conte" owning-side="true" alias="conte" uuid="e30cf2b8-dd09-435b-91c8-9edd9e34d76f">
+        <many-to-many-field from="conte_id" to="id"/>
+      </many-to-many-entity>
+      <many-to-many-entity name="\JTIR\PlatformBundle\Entity\Carte" owning-side="false" alias="carte" uuid="bfa22a42-5360-48c0-b901-79374e1774c4">
+        <many-to-many-field from="carte_id" to="id"/>
+      </many-to-many-entity>
+    </many-to-many>
+    <entity name="\JTIR\PlatformBundle\Entity\Conte_Son" local-name="Conte_Son" namespace="\JTIR\PlatformBundle\Entity" local-namespace="Entity" uuid="4e2f62ae-b7a3-49de-b26a-a16ce5487d80">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="a19df174-710c-479e-959b-8c1b04804d44"/>
+      <field name="son_id" type="integer" required="true" primary="true" uuid="5416e3bf-f71b-4786-af0a-b2aa4d1c6948"/>
+      <field name="conte_id" type="integer" required="true" primary="true" uuid="b1bbc14e-0c05-46b5-b6dc-b2f670352bb9"/>
+    </entity>
+    <many-to-many mn-entity="\JTIR\PlatformBundle\Entity\Conte_Son" caption="Son to Conte" uuid="03b93e17-da03-45fb-9b67-2e6ed16a25ce">
+      <many-to-many-entity name="\JTIR\PlatformBundle\Entity\Conte" owning-side="true" alias="conte" uuid="6735a933-6a63-46db-8735-1ab6841d03e1">
+        <many-to-many-field from="conte_id" to="id"/>
+      </many-to-many-entity>
+      <many-to-many-entity name="\JTIR\PlatformBundle\Entity\Son" owning-side="false" alias="son" uuid="8f8a29dd-55ad-4d00-9641-6850aef460e5">
+        <many-to-many-field from="son_id" to="id"/>
+      </many-to-many-entity>
+    </many-to-many>
+  </module>
+  <module name="\UserBundle" local-name="UserBundle" namespace="\JTIR\UserBundle" local-namespace="JTIR\UserBundle" export-format="Doctrine2Php" export-path="../../../Downloads/ORM Doctrine 2" uuid="8b285bad-6cc3-4632-a771-3b3285e28944">
+    <entity name="\JTIR\UserBundle\Entity\Enseignant" local-name="Enseignant" namespace="\JTIR\UserBundle\Entity" local-namespace="Entity" uuid="d9560468-38b4-44dc-85ff-079000e943ce">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="5c4659c2-6f8a-48e5-8d08-fc4ea093843a"/>
+      <field name="civilite_id" type="integer" required="true" uuid="406edc06-01b5-42fd-96a0-2a56e00b2ae7"/>
+      <field name="adresse_id" type="integer" required="true" uuid="fa39f434-3751-4294-a105-f6ce6c216b0f"/>
+      <field name="identite_id" type="integer" required="true" uuid="5e0e10d1-4e67-4175-82bb-dcc918e0c51e"/>
+    </entity>
+    <association from="\JTIR\UserBundle\Entity\Enseignant" to="\JTIR\UserBundle\Entity\Civilite" caption="Civilite Enseignant" owner-alias="enseignant" inverse-alias="civilite" many-owner="true" many-inverse="false" parent-required="true" uuid="60675c48-c679-4d4d-bf79-20f436c88f0e">
+      <association-field from="civilite_id" to="id"/>
+    </association>
+    <association from="\JTIR\UserBundle\Entity\Enseignant" to="\JTIR\UserBundle\Entity\Adresse" caption="Adresse Enseignant" owner-alias="enseignant" inverse-alias="adresse" many-owner="true" many-inverse="false" parent-required="true" uuid="5fd76590-6f27-428c-9441-6c13db6c1275">
+      <association-field from="adresse_id" to="id"/>
+    </association>
+    <association from="\JTIR\UserBundle\Entity\Enseignant" to="\JTIR\UserBundle\Entity\Identite" caption="Identite Enseignant" owner-alias="enseignant" inverse-alias="identite" many-owner="true" many-inverse="false" parent-required="true" uuid="2d82159f-fa71-4284-88f6-dfef3fd39a36">
+      <association-field from="identite_id" to="id"/>
+    </association>
+    <entity name="\JTIR\UserBundle\Entity\Classe" local-name="Classe" namespace="\JTIR\UserBundle\Entity" local-namespace="Entity" uuid="a3439ebc-fd5b-4bbf-8b34-b9e479faab8e">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="e40cbdb4-5a55-4b37-bff4-ff8f2d57d606"/>
+      <field name="niveau" type="string" size="15" required="true" uuid="9ab4f347-b979-432a-9e65-31aabbbb8d29"/>
+      <field name="enseignant_id" type="integer" required="true" uuid="682b6c7c-5af2-4ed0-84fa-fa6d5ed24153"/>
+      <field name="classe_id" type="integer" uuid="24e5a4b2-4d78-4f14-b1b1-940ac316e8f6"/>
+    </entity>
+    <association from="\JTIR\UserBundle\Entity\Classe" to="\JTIR\UserBundle\Entity\Enseignant" caption="Enseignant Classe" owner-alias="classe" inverse-alias="enseignant" many-owner="true" many-inverse="false" parent-required="true" uuid="bedb195a-c19a-44c3-b6cd-16c9b2d5c67c">
+      <association-field from="enseignant_id" to="id"/>
+    </association>
+    <association from="\JTIR\UserBundle\Entity\Classe" to="\JTIR\UserBundle\Entity\Classe" caption="Classe Classe" owner-alias="EP_classe" inverse-alias="EI_classe" many-owner="true" many-inverse="false" uuid="b1325203-f3fc-4b81-a663-378cc6b9aa24">
+      <association-field from="classe_id" to="id"/>
+    </association>
+    <entity name="\JTIR\UserBundle\Entity\Eleve" local-name="Eleve" namespace="\JTIR\UserBundle\Entity" local-namespace="Entity" uuid="e8589c1f-7dc0-45b0-8314-9756a825c039">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="ed50b244-6127-48d6-8c4c-2cad277098f0"/>
+      <field name="identite_id" type="integer" required="true" unique="true" uuid="22a9ebcb-3710-4228-be0c-09066e1fe645"/>
+      <field name="classe_id" type="integer" required="true" uuid="141004d1-b344-4bbf-9ca4-d2ccebc7b1df"/>
+    </entity>
+    <association from="\JTIR\UserBundle\Entity\Eleve" to="\JTIR\UserBundle\Entity\Identite" caption="Identite Eleve" owner-alias="eleve" inverse-alias="identite" many-owner="false" many-inverse="false" parent-required="true" uuid="34a758bd-56b7-4ac3-839f-0bb822d8d870">
+      <association-field from="identite_id" to="id"/>
+    </association>
+    <association from="\JTIR\UserBundle\Entity\Eleve" to="\JTIR\UserBundle\Entity\Classe" caption="Classe Eleve" owner-alias="eleve" inverse-alias="classe" many-owner="true" many-inverse="false" parent-required="true" uuid="876014e5-c717-4e04-9252-784b7d63905f">
+      <association-field from="classe_id" to="id"/>
+    </association>
+    <entity name="\JTIR\UserBundle\Entity\Adresse" local-name="Adresse" namespace="\JTIR\UserBundle\Entity" local-namespace="Entity" uuid="db81b934-3635-4bf4-a3b6-d8e592031ec3">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="2aea3e8c-82fc-48b5-a895-2859208f4f19"/>
+      <field name="departement" type="string" size="50" required="true" uuid="0567cfdc-8ded-44f3-9b69-7b29ebf213b8"/>
+      <field name="ville" type="string" size="50" required="true" uuid="f3a45b96-6445-4a86-b55e-271a314f45ac"/>
+      <field name="etablissement" type="string" size="100" required="true" uuid="f9d79565-a2a2-4502-8eb6-a3ec178690a0"/>
+    </entity>
+    <entity name="\JTIR\UserBundle\Entity\Identite" local-name="Identite" namespace="\JTIR\UserBundle\Entity" local-namespace="Entity" uuid="2878a408-6484-45a5-ba6a-3d4f05cc0793">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="adff581a-2b7a-4d68-b78e-1b96c24ac918"/>
+      <field name="nom" type="string" size="30" required="true" uuid="5405b317-8588-416e-834d-f04504a72c32"/>
+      <field name="prenom" type="string" size="30" required="true" uuid="48612b13-eace-42e7-8714-b47784c3c751"/>
+    </entity>
+    <entity name="\JTIR\UserBundle\Entity\Civilite" local-name="Civilite" namespace="\JTIR\UserBundle\Entity" local-namespace="Entity" uuid="615609de-e2e5-46d0-b03a-7c2be249994d">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="5cb470c1-ce75-4ae4-b4d3-a94f7ed528fe"/>
+      <field name="libelle" type="string" size="20" required="true" uuid="f7a5c4e0-42df-4cd7-ad02-7166e6b0afff"/>
+    </entity>
+  </module>
+  <visual-data>
+    <association uuid="1d662103-6422-445b-83c8-98f866c49837" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="2d82159f-fa71-4284-88f6-dfef3fd39a36" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="344299a3-1b9b-4da1-9da2-61549c1f01ab" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="34a758bd-56b7-4ac3-839f-0bb822d8d870" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="5fd76590-6f27-428c-9441-6c13db6c1275" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="60675c48-c679-4d4d-bf79-20f436c88f0e" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="876014e5-c717-4e04-9252-784b7d63905f" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <association uuid="b1325203-f3fc-4b81-a663-378cc6b9aa24" caption1-position-x="-1" caption1-position-y="6" center-position-x="0" center-position-y="-43" color="#969696"/>
+    <association uuid="bedb195a-c19a-44c3-b6cd-16c9b2d5c67c" caption1-position-x="0" caption1-position-y="0" center-position-x="0" center-position-y="0" color="#969696"/>
+    <entity uuid="2878a408-6484-45a5-ba6a-3d4f05cc0793" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="129" position-y="372" size-x="0" size-x2="104" size-y="0" size-y2="59"/>
+    <entity uuid="2f2f8b4c-88b4-4ad3-947a-8e63eec3615c" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="234" position-y="17" size-x="0" size-x2="97" size-y="0" size-y2="74"/>
+    <entity uuid="4e2f62ae-b7a3-49de-b26a-a16ce5487d80" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="254" position-y="276" size-x="0" size-x2="97" size-y="0" size-y2="74"/>
+    <entity uuid="615609de-e2e5-46d0-b03a-7c2be249994d" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="13" position-y="56" size-x="0" size-x2="96" size-y="0" size-y2="45"/>
+    <entity uuid="8b51d031-2737-4d8e-82b4-6a5116e12c59" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="489" position-y="24" size-x="0" size-x2="112" size-y="0" size-y2="59"/>
+    <entity uuid="a3439ebc-fd5b-4bbf-8b34-b9e479faab8e" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="386" position-y="183" size-x="0" size-x2="119" size-y="0" size-y2="73"/>
+    <entity uuid="c1944128-4ddc-4e40-a4c5-3ea8a673758a" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="497" position-y="181" size-x="0" size-x2="96" size-y="0" size-y2="45"/>
+    <entity uuid="c4b72611-e24b-445a-9357-db0ae7e00d6c" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="492" position-y="290" size-x="0" size-x2="88" size-y="0" size-y2="45"/>
+    <entity uuid="d9560468-38b4-44dc-85ff-079000e943ce" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="128" position-y="182" size-x="0" size-x2="107" size-y="0" size-y2="73"/>
+    <entity uuid="db81b934-3635-4bf4-a3b6-d8e592031ec3" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="279" position-y="55" size-x="0" size-x2="136" size-y="0" size-y2="73"/>
+    <entity uuid="e8589c1f-7dc0-45b0-8314-9756a825c039" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="515" position-y="375" size-x="0" size-x2="104" size-y="0" size-y2="59"/>
+    <entity uuid="fdf75629-d397-407f-9b0b-e5da3f79f6ea" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="24" position-y="109" size-x="0" size-x2="135" size-y="0" size-y2="157"/>
+    <many-to-many-association uuid="03b93e17-da03-45fb-9b67-2e6ed16a25ce" color="#969696"/>
+    <many-to-many-association uuid="6239c4a9-2008-453b-a331-745a5d4a1285" color="#969696"/>
+    <many-to-many-association-entity uuid="6735a933-6a63-46db-8735-1ab6841d03e1" caption1-position-x="-12" caption1-position-y="3" center-position-x="0" center-position-y="0"/>
+    <module uuid="5c72ce28-d7c4-4a0b-8087-4f583f16968d" bg-color="#E7F5FD" position-x="518" position-y="5" size-x="11" size-x2="645" size-y="23" size-y2="447"/>
+    <module uuid="8b285bad-6cc3-4632-a771-3b3285e28944" bg-color="#FEFCE8" position-x="-134" position-y="-18" size-x="0" size-x2="637" size-y="0" size-y2="470"/>
+    <project uuid="d23c2f64-2000-4204-8f0d-52eebfa9f1bf" size-x="142" size-x2="1169" size-y="25" size-y2="780"/>
+  </visual-data>
+</skipper>
